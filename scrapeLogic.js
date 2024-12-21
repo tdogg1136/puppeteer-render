@@ -6,7 +6,7 @@ require("dotenv").config();
 const scrapeLogic = async(res) =>{
 
      // Launch the browser and open a new blank page
-     const browser = await puppeteer.launch({ timeout: 30000,
+     const browser = await puppeteer.launch({ timeout: 60000,
         args: [
             "--disable-setuid-sandbox",
             "--no-sandbox",
