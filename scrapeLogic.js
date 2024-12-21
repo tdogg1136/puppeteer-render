@@ -35,12 +35,12 @@ const scrapeLogic = async(res) =>{
         
         // Wait and click on first result
         const searchResultSelector = '.devsite-result-item-link';
-        await page.waitForSelector(searchResultSelector, {timeout: 60000});
+        await page.waitForSelector(searchResultSelector, {timeout: 120000});
         await page.click(searchResultSelector);
         
         // Locate the full title with a unique string
         const textSelector = await page.waitForSelector(
-            'text/Customize and automate', {timeout: 60000}
+            'text/Customize and automate', {timeout: 120000}
         );
         const fullTitle = await textSelector?.evaluate(el => el.textContent);
         
